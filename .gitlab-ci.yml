@@ -9,6 +9,6 @@ pages:
     - echo "The site will be deployed to $CI_PAGES_URL"
   artifacts:
     paths:
-      - public
+      - taniti-prototype/dist
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
