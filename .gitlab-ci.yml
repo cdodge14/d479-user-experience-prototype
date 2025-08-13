@@ -7,8 +7,11 @@ pages:
   stage: deploy
   script:
     - echo "The site will be deployed to $CI_PAGES_URL"
+    - cd taniti-prototype
+    - npm run build
+    - mv dist/* ../public/*
   artifacts:
     paths:
-      - taniti-prototype/dist
+      - public
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
