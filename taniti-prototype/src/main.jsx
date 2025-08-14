@@ -18,24 +18,24 @@ import ContactPage from './pages/ContactUsPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path='/accommodations' element={<AccommodationsPage />} />
-          <Route path='/activities' element={<ActivitiesPage />} />
-          <Route path="/references" element={<ReferencesPage />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/booking" element={<BookingReservedPage />} />
-          <Route path="/dining" element={<DiningPage />} />
-          <Route path="/transportation" element={<TransportationPage />} />
-          <Route path="/itinerary" element={<ItineraryPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-  </StrictMode>,
+    <StrictMode>
+        <ThemeProvider>
+            <BrowserRouter basename="/d479-user-experience-prototype">
+                <Routes>
+                    <Route path="/" element={<App />} />
+                    <Route path='/accommodations' element={<AccommodationsPage />} />
+                    <Route path='/activities' element={<ActivitiesPage />} />
+                    <Route path="/references" element={<ReferencesPage />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/booking" element={<BookingReservedPage />} />
+                    <Route path="/dining" element={<DiningPage />} />
+                    <Route path="/transportation" element={<TransportationPage />} />
+                    <Route path="/itinerary" element={<ItineraryPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
+    </StrictMode>,
 )
