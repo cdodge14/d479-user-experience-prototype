@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useStyleMap } from '../hooks/useStyleMap';
 
 const Navigation = ({ isMobile, onLinkClick }) => {
     const styles = useStyleMap();
+    const navigate = useNavigate();
 
     const links = [
         { href: "/accommodations", label: "Accommodations" },
@@ -15,14 +17,18 @@ const Navigation = ({ isMobile, onLinkClick }) => {
     return (
         <nav className={isMobile ? styles.mobileNav : styles.nav}>
             {links.map(link => (
-                <a
+                <button
                     key={link.href}
-                    href={link.href}
-                    onClick={isMobile && onLinkClick ? onLinkClick : undefined}
+                    onClick={() => {
+                        if(isMobile && onLinkClick){
+                            onLinkClick()
+                        }
+                        navigate(link.href);
+                    }}
                     className={isMobile ? styles.mobileNavLink : styles.navLink}
                 >
                     {link.label}
-                </a>
+                </button>
             ))}
         </nav>
     );

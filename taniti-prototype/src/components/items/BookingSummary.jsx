@@ -17,7 +17,7 @@ const BookingSummary = ({ children, booking, onClick }) => {
                 </button>
                 <div className='relative'>
                     <img
-                        src={booking.image}
+                        src={import.meta.env.BASE_URL + booking.image}
                         alt={booking.alt}
                         className="w-full h-48 object-cover rounded"
                     />

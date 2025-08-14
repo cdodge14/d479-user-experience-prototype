@@ -9,7 +9,7 @@ const BookingCard = ({ booking, onClick }) => {
         <div className="bg-white rounded shadow p-4">
             <div className='relative'>
                 <img
-                    src={booking.image}
+                    src={import.meta.env.BASE_URL + booking.image}
                     alt={booking.alt}
                     className="w-full h-48 object-cover rounded"
                 />

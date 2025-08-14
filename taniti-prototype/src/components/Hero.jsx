@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       className="relative bg-cover bg-center h-64"
-      style={{ backgroundImage: "url('src/assets/sea-4434933_1920.jpg')" }}
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}src/assets/sea-4434933_1920.jpg')` }}
     >
       <div
         className="absolute inset-0 flex items-center justify-center"

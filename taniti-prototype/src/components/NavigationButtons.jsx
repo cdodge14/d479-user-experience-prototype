@@ -1,18 +1,20 @@
 import { useTheme } from '../context/ThemeContext';
+import { useNavigate } from 'react-router-dom';
 
 const NavigationButtons = ({ buttons }) => {
     const { colors } = useTheme();
+    const navigate = useNavigate();
 
     return (
         <section className="py-8 px-4 flex flex-col md:flex-row justify-center gap-4 text-center">
             {buttons.map((button, index) => (
-                <a
+                <button
                     key={index}
-                    href={button.href}
                     className={`bg-${colors.primary} text-white px-6 py-3 rounded hover:bg-${colors.primaryHover}`}
+                    onClick={() => {navigate(button.href)}}
                 >
                     {button.label}
-                </a>
+                </button>
             ))}
         </section>
     );
