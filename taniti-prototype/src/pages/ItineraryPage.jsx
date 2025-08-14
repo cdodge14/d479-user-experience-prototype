@@ -48,7 +48,7 @@ function ItineraryPage() {
                                     booking={activities.activity}
                                     onClick={() => {
                                         localStorage.removeItem("tanitiActivityBooking");
-                                        window.location.reload();
+                                        navigate("/itinerary");
                                     }}
                                 >
                                     <BookingInfo guestInfo={activities} />
