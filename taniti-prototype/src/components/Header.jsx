@@ -13,7 +13,7 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.headerContainer}>
                 <a
-                    onClick={() => { useNavigate("/"); }}
+                    onClick={() => { navigate("/"); }}
                     className={styles.logo}
                 >
                     Visit Taniti
